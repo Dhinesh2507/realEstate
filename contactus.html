@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- Include Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <title>Sri Ragavendra Real Estates</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container" id="navs">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/fab1.png" alt="Logo" class="nav__image">
+                </a>
+        
+                <a href="#" class="nav__logo" style="margin-left: -2%;">
+                    SRI RAGAVENDRA <br>REAL ESTATE & CONSTRUCTION
+                </a>
+        
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">
+                                <i class='bx bx-home-alt-2'></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+        
+                        <li class="nav__item">
+                            <a href="aboutus.html" class="nav__link">
+                                <i class='bx bx-building-house'></i>
+                                <span>About Us</span>
+                            </a>
+                        </li>
+        
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown-toggle">
+                                <i class='bx bx-spa'></i>
+                                <span>Projects</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="current-projects.html" class="dropdown-item">Current Project</a></li>
+                                <li><a href="#" class="dropdown-item">Upcoming Project</a></li>
+                                <li><a href="#" class="dropdown-item">Completed Project</a></li>
+                            </ul>
+                        </li>
+        
+                        <li class="nav__item">
+                            <a href="contactus.html" class="nav__link">
+                                <i class='bx bx-phone'></i>
+                                <span>Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <!--==================== MAIN ====================-->
+        <main class="main">
+
+
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Financial <br> Marketing <br> Business Development
+                        </h1>
+                        <p class="home__description">
+                            If you are dreaming about " Land / House " beautiful, so don’t worry we will help to get with our good valuable, reliable planning for the same!!
+                        </p>
+
+                        <!-- <form action="" class="home__search">
+                            <i class='bx bxs-map'></i>
+                            <input type="search" placeholder="Search by location..." class="home__search-input">
+                            <button type="button" class="button">Search</button>
+                        </form> -->
+
+                        <div class="home__value">
+                            <div>
+                                <h1 class="home__value-number">
+                                    2K <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Premium <br> Properties
+                                </span>
+                            </div>
+                            <div>
+                                <h1 class="home__value-number">
+                                    3k <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Happy <br> Customer
+                                </span>
+                            </div>
+                            <div>
+                                <h1 class="home__value-number">
+                                    1k <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Sucessful <br> Deals 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home__images">
+                        <div class="home__orbe"></div>
+
+                        <div class="home__img">
+                            <img src="assets/img/logo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <div class="container225">
+                
+              </div>
+            <!----------------------------------about--------------------------->
+            <div class="containerget">
+                <img src="/assets/img/contact6.gif" alt="Illustration">
+                <div class="form-container">
+                    <h2>Get in Touch</h2>
+                    <form id="contactForm">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="mobile" name="mobile" placeholder="Mobile No" required>
+                        <textarea id="address" name="address" placeholder="Address" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your user ID
+    (function () {
+        emailjs.init("L47EIa4SleZSyhHT7"); // Replace "YOUR_USER_ID" with your actual EmailJS user ID
+    })();
+
+    // Function to send email using EmailJS
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Gather form data
+        var formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            mobile: document.getElementById('mobile').value,
+            address: document.getElementById('address').value
+        };
+
+        // Send email
+        emailjs.send('service_bkeqc2g', 'template_udjqimv', formData)
+        .then(function (response) {
+                console.log('Email sent successfully:', response);
+                alert('Thank you, ' + formData['name'] + '! We will contact you soon!');
+                document.getElementById('contactForm').reset(); // Reset the form
+            }, function (error) {
+                console.error('Error sending email:', error);
+                alert('Sorry, there was an error sending your message. Please try again later.'); // Show error message
+            });
+    }
+
+    // Add event listener to the form for form submission
+    document.getElementById('contactForm').addEventListener('submit', sendEmail);
+</script>
+
+            </main>
+        <!-- ****************ICONS**************************-->
+        <div class="contact-icons">
+            <a href="https://api.whatsapp.com/send?phone=7639219709" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:ragavan.13497@gmail.com" target="_blank" class="email"><i class="far fa-envelope"></i></a>
+            <a href="tel:+8883889001" class="phone"><i class="fas fa-phone"></i></a>
+        </div>
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__column" >
+                    
+                    <a href="#" class="nav__logo" style="margin-top: -20px;font-size: 10px;margin-left: -20px;">
+                        <img src="assets/img/fab1.png" alt="Logo" class="nav__image"><P style="margin-left: -20px;color: #060270;font-family: 'Poppins', sans-serif;">SRI RAGAVENDRA<br>REAL ESTATE & CONSTRUCTION</P>
+                    </a>
+                    
+                    <p class="footer__address">
+                        No.1, First Floor,<br>
+                        Bhakyalakshmi Building,<br>
+                        Sundar Nagar (Hostel Bus Stop),<br>
+                        Trichy-21.<br>
+                        PH:8883889001
+
+                    </p><br>
+                    <br>
+                    <p class="footer__address">
+                        No.1, Ragavendra Complex,<br>
+                        Udayanpatti Road,<br>
+                        KK Nagar<br>
+                        Trichy-21.<br>
+                        PH:7639219709
+                    </p>
+                </div>
+                
+                <div class="footer__column footer__map">
+                    <h3 class="footer__title">OUR LOCATION</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62713.7461640627!2d78.64670427638485!3d10.76457680421939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8b4a81859d83%3A0xaee36045e59bf264!2sSri%20Ragavendra%20Real%20Estate%20and%20Construction!5e0!3m2!1sen!2sin!4v1721816395406!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+                        <br>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7714907522354!2d78.68958407586852!3d10.752086609640564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8adca090de99%3A0x4cae81034069e71b!2sRagavendra%20Complex!5e0!3m2!1sen!2sin!4v1721816569791!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">QUICK LINKS</h3>
+                    <ul class="footer__links">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="current-projects.html">Projects</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title" >FOLLOW US</h3>
+                    <div class="footer__socials" style="margin-left: 15px;">
+                        <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="footer__social"><i class="bx bxl-instagram"></i></a>
+                   
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                © Sri Ragavendra. All rights reserved
+            </div>
+        </footer>
+
+ 
+
+
+<!--========== SCROLL UP ==========-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class='bx bxs-chevrons-up'></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="assets/js/scrollreveal.min.js"></script>
+
+<!--=============== SWIPER JS ===============-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
